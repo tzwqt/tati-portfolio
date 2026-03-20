@@ -164,9 +164,7 @@ export default function InteractiveResumeSite() {
           </div>
 
           <div className="flex flex-wrap gap-3 text-sm text-neutral-700">
-          <div className="flex items-center gap-2 rounded-full bg-white dark:bg-neutral-900 px-4 py-2 shadow-sm border border-white dark:border-neutral-800 text-neutral-700 dark:text-neutral-200"><Code2 className="h-4 w-4" /> 5+ years of experience</div>
-          <div className="flex items-center gap-2 rounded-full bg-white dark:bg-neutral-900 px-4 py-2 shadow-sm border border-white dark:border-neutral-800 text-neutral-700 dark:text-neutral-200"><Code2 className="h-4 w-4" /> CSWA Certified</div>
-          <div className="flex items-center gap-2 rounded-full bg-white dark:bg-neutral-900 px-4 py-2 shadow-sm border border-white dark:border-neutral-800 text-neutral-700 dark:text-neutral-200"><Code2 className="h-4 w-4" /> AutoCAD Certified</div>
+          <div className="flex items-center gap-2 rounded-full bg-white dark:bg-neutral-900 px-4 py-2 shadow-sm border border-white dark:border-neutral-800 text-neutral-700 dark:text-neutral-200"><Code2 className="h-4 w-4" /> 5+ Years Experience • CSWA Certified • AutoCAD Certified</div>
           </div>
           <div className="flex flex-wrap gap-3">
           <a href="#projects" className="rounded-2xl px-5 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 shadow-lg hover:-translate-y-0.5 transition">              View My Work
@@ -473,9 +471,11 @@ export default function InteractiveResumeSite() {
       <div className="rounded-[2rem] bg-white/90 dark:bg-neutral-900/90 border border-white dark:border-neutral-800 p-8 shadow-lg">
           <h2 className="text-3xl font-bold mb-4">My Vision</h2>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-3xl">
-            I believe design should feel human. My goal is to create technology and
-            architecture that not only functions efficiently, but also improves how
-            people feel, connect, and experience the world around them.
+          I believe design should feel human. My goal is to create technology, architecture,
+           and systems that not only function efficiently, but also improve how people 
+           feel, connect, and experience the world around them. By combining 
+           engineering, creativity, and innovation, I aim to build solutions that support
+           my community, uplift underserved populations, and create a more thoughtful and connected future.
           </p>
         </div>
       </section>
