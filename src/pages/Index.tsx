@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Github, Linkedin, Code2, GraduationCap, ChevronRight, Download } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, Code2, ChevronRight, Download } from "lucide-react";
 
 const contactLinks = {
   email: "mailto:tahti07@icloud.com",
@@ -112,15 +112,17 @@ const stats = [
   { label: "Robotics Programs", value: "3" },
   { label: "FIRST Robotics", value: "Lead Programmer" },
   { label: "Service Hours", value: "200+" },
-  { label: "Focus Areas", value: "Code + Design" },
+  { label: "Focus Areas", value: "Code + Design" }
 ];
 
 export default function InteractiveResumeSite() {
   const [activeGroup, setActiveGroup] = useState("Programming");
   const [activeProject, setActiveProject] = useState(projects[0]);
   const [darkMode, setDarkMode] = useState(false);
+  const [resumeLoading, setResumeLoading] = useState(false);
 
   const groupButtons = useMemo(() => Object.keys(skillGroups), []);
+
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -128,6 +130,15 @@ export default function InteractiveResumeSite() {
       document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
+
+  const handleResumeClick = () => {
+    setResumeLoading(true);
+
+    setTimeout(() => {
+      setResumeLoading(false);
+    }, 1200);
+  };
+
   return (
 <div className="relative min-h-screen bg-gradient-to-b from-rose-50 via-orange-50 to-emerald-50 text-neutral-900 overflow-hidden dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-950 dark:text-neutral-100 transition-colors duration-300">      <section className="max-w-6xl mx-auto px-6 py-16 lg:py-24 grid lg:grid-cols-2 gap-10 items-center">
         <motion.div
@@ -171,8 +182,25 @@ export default function InteractiveResumeSite() {
             </a>
             <a href="#contact" className="rounded-2xl px-5 py-3 bg-white dark:bg-neutral-900 border border-white dark:border-neutral-800 shadow-sm hover:-translate-y-0.5 transition inline-flex items-center gap-2 text-neutral-900 dark:text-neutral-100">              Contact Me <ChevronRight className="h-4 w-4" />
             </a>
-            <a href={contactLinks.resume} target="_blank" rel="noreferrer" className="rounded-2xl px-5 py-3 bg-white dark:bg-neutral-900 border border-white dark:border-neutral-800 shadow-sm hover:-translate-y-0.5 transition inline-flex items-center gap-2 text-neutral-900 dark:text-neutral-100">              <Download className="h-4 w-4" /> Resume PDF
-            </a>
+            <a
+  href={contactLinks.resume}
+  target="_blank"
+  rel="noopener noreferrer"
+  onClick={handleResumeClick}
+  className="rounded-2xl px-5 py-3 bg-white dark:bg-neutral-900 border border-white dark:border-neutral-800 shadow-sm hover:-translate-y-0.5 transition inline-flex items-center gap-2 text-neutral-900 dark:text-neutral-100"
+>
+  {resumeLoading ? (
+    <>
+      <span className="h-4 w-4 rounded-full border-2 border-neutral-400 border-t-transparent animate-spin"></span>
+      Opening Resume...
+    </>
+  ) : (
+    <>
+      <Download className="h-4 w-4" />
+      Resume PDF
+    </>
+  )}
+</a>
           </div>
         </motion.div>
 
@@ -292,7 +320,7 @@ export default function InteractiveResumeSite() {
   <h3 className="text-3xl font-bold mt-3">{activeProject.title}</h3>
   <p className="text-neutral-500 dark:text-neutral-400 mt-2">{activeProject.category}</p>
 
-  {activeProject.title === "Architectural Design Portfolio" ? (
+  {activeProject.title === "Architectural Design Portfolio"? (
     <div className="mt-6 grid grid-cols-2 gap-4">
       <img src="/arch1.jpg" alt="arch preview 1" className="rounded-xl shadow-md hover:scale-105 transition" />
       <img src="/arch2.jpg" alt="arch preview 2" className="rounded-xl shadow-md hover:scale-105 transition" />
@@ -421,7 +449,8 @@ export default function InteractiveResumeSite() {
   </div>
 
   <div className="grid md:grid-cols-3 gap-6">
-  <div className="rounded-[2rem] bg-white dark:bg-neutral-900 border border-white dark:border-neutral-800 shadow-lg overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">      <img
+  <div className="rounded-[2rem] bg-white dark:bg-neutral-900 border border-white dark:border-neutral-800 shadow-lg overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">      
+    <img
         src="/arch-concept.jpg"
         alt="Conceptual architecture design"
         className="w-full h-56 object-cover"
@@ -528,7 +557,7 @@ export default function InteractiveResumeSite() {
 
   {/* COPYRIGHT */}
   <p className="text-xs text-neutral-400">
-    © 2026 Tatianna Hernupont. Built with React + Tailwind.
+    © 2026 Tatianna Hernupont.
   </p>
 
 </footer>
