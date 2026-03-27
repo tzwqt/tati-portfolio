@@ -175,7 +175,7 @@ export default function InteractiveResumeSite() {
           </div>
 
           <div className="flex flex-wrap gap-3 text-sm text-neutral-700">
-          <div className="flex items-center gap-2 rounded-full bg-white dark:bg-neutral-900 px-4 py-2 shadow-sm border border-white dark:border-neutral-800 text-neutral-700 dark:text-neutral-200"><Code2 className="h-4 w-4" /> 5+ Years Experience • CSWA Certified • AutoCAD Certified</div>
+          <div className="flex items-center gap-2 rounded-full bg-white dark:bg-neutral-900 px-4 py-2 shadow-sm border border-white dark:border-neutral-800 text-neutral-700 dark:text-neutral-200"><Code2 className="h-4 w-4" /> 5+ Years Experience • AutoCAD Certified</div>
           </div>
           <div className="flex flex-wrap gap-3">
           <a href="#projects" className="rounded-2xl px-5 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 shadow-lg hover:-translate-y-0.5 transition">              View My Work
