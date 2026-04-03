@@ -83,7 +83,7 @@ const projects = [
   },
   {
     title: "VEX Robotics Competition Systems",
-    category: "Programming",
+    category: "Programming | Notebook Coordinator",
     blurb:
       "Developed and optimized autonomous and driver-controlled systems in C++ for competitive robotics, focusing on reliability,fast iteration, and real-time performance under pressure.",
     details:
