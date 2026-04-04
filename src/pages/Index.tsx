@@ -214,7 +214,7 @@ export default function InteractiveResumeSite() {
         >
           {stats.map((stat) => (
             <div key={stat.label} className="rounded-[2rem] bg-white/90 dark:bg-neutral-900/90 backdrop-blur p-6 shadow-lg border border-white dark:border-neutral-800">             
-           <p className="text-2xl md:text-3xl font-semibold text-neutral-800 dark:text-neutral-100">{stat.value}</p>
+           <p className="text-xl md:text-3xl font-semibold text-neutral-800 dark:text-neutral-100">{stat.value}</p>
            <p className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">{stat.label}</p>
               </div>
           ))}
