@@ -522,9 +522,6 @@ export default function InteractiveResumeSite() {
             <a href={contactLinks.email} className="rounded-2xl border border-white/15 p-4 hover:bg-white/5 transition flex items-center gap-3">
               <Mail className="h-5 w-5" /> tahti07@icloud.com
             </a>
-            <a href={contactLinks.linkedin} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/15 p-4 hover:bg-white/5 transition flex items-center gap-3">
-              <Linkedin className="h-5 w-5" /> LinkedIn
-            </a>
             <a href={contactLinks.github} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/15 p-4 hover:bg-white/5 transition flex items-center gap-3">
               <Github className="h-5 w-5" /> GitHub
             </a>
