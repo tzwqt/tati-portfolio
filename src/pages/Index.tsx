@@ -31,7 +31,7 @@ const experience = [
     tag: "Robotics",
   },
   {
-    title: "Software Engineering Intern (Unpaid)",
+    title: "Software Engineering Intern (uncompensated)",
     org: "ExxonMobil x HISD",
     period: "2026",
     description:
