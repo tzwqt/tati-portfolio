@@ -113,14 +113,6 @@ const experience = [
 
 const projects = [
   {
-    title: "ExxonMobil Material Documentation Accountability Portal",
-    category: "Software Engineering / Internship",
-    blurb:
-      "Developed a live React-based prototype for ExxonMobil x HISD to improve document traceability, accountability, and secure handling of material records.",
-    details:
-      "Designed and deployed a professional prototype that simulates secure worker sign-in, QR/document scanning, upload workflows, timestamp tracking, and enterprise-focused accountability. Built with React, Vite, Tailwind CSS, GitHub, and Vercel. This project demonstrates a real-world implementation of software engineering principles in an enterprise environment.",
-  },
-  {
     title: "VEX Robotics Competition Systems",
     category: "Programming | Notebook Coordinator",
     blurb:
@@ -458,26 +450,6 @@ export default function InteractiveResumeSite() {
       </a>
     )}
 
-    {activeProject.title === "ExxonMobil Material Documentation Accountability Portal" && (
-      <>
-        <a
-          href={projectLinks.exxonLive}
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-2xl px-5 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 shadow-lg hover:-translate-y-0.5 transition"
-        >
-          Live Site
-        </a>
-        <a
-          href={projectLinks.exxonGithub}
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-2xl px-5 py-3 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 shadow-sm hover:-translate-y-0.5 transition inline-flex items-center gap-2 text-neutral-900 dark:text-neutral-100"
-        >
-          GitHub
-        </a>
-      </>
-    )}
   </div>
 </motion.div>
         </div>
