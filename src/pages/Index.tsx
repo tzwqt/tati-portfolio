@@ -491,58 +491,6 @@ export default function InteractiveResumeSite() {
   </div>
 </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-12" id="portfolio">
-  <div className="flex items-center gap-3 mb-6">
-    <h2 className="text-3xl font-bold">Architecture Portfolio</h2>
-  </div>
-
-  <div className="grid md:grid-cols-3 gap-6">
-  <div className="rounded-[2rem] bg-white dark:bg-neutral-900 border border-white dark:border-neutral-800 shadow-lg overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">      
-    <img
-        src="/arch-concept.jpg"
-        alt="Conceptual architecture design"
-        className="w-full h-56 object-cover"
-      />
-      <div className="p-6">
-        <h3 className="text-xl font-semibold">Conceptual Design</h3>
-        <p className="mt-3 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          Explored how architecture can shape emotion, belonging, and well-being
-          through expressive forms and nature-integrated ideas.
-        </p>
-      </div>
-    </div>
-
-    <div className="rounded-[2rem] bg-white dark:bg-neutral-900 border border-white dark:border-neutral-800 shadow-lg overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">
-      <img
-        src="/arch-cad.jpg"
-        alt="AutoCAD and Revit work"
-        className="w-full h-56 object-cover"
-      />
-      <div className="p-6">
-        <h3 className="text-xl font-semibold">AutoCAD + Revit</h3>
-        <p className="mt-3 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          Created floor plans, technical drawings, and design studies focused on
-          dimensional accuracy, structure, and presentation.
-        </p>
-      </div>
-    </div>
-
-    <div className="rounded-[2rem] bg-white dark:bg-neutral-900 border border-white dark:border-neutral-800 shadow-lg overflow-hidden hover:-translate-y-1 hover:shadow-xl transition">
-      <img
-        src="/arch-building.jpg"
-        alt="Architectural building design"
-        className="w-full h-56 object-cover"
-      />
-      <div className="p-6">
-        <h3 className="text-xl font-semibold">Design Philosophy</h3>
-        <p className="mt-3 text-neutral-600 dark:text-neutral-400 leading-relaxed">
-          I want to create spaces that feel welcoming, alive, and human—where
-          thoughtful design improves both environment and everyday experience.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section className="max-w-6xl mx-auto px-6 py-12" id="contact">
         <div className="rounded-[2rem] bg-neutral-900 text-white p-8 md:p-10 shadow-2xl">
