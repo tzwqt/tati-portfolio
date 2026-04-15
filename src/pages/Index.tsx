@@ -134,7 +134,7 @@ const projects = [
 const stats = [
   { label: "Programming Languages", value: "4+" },
   { label: "Robotics Programs Led", value: "2" },
-  { label: "Client Sites Shipped", value: "4" },
+  { label: "Client Sites Shipped", value: "8" },
   { label: "Volunteer Hours", value: "200+" },
   { label: "Certifications", value: "CSWA + AutoCAD" },
 ];
