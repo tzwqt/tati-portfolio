@@ -198,7 +198,7 @@ export default function InteractiveResumeSite() {
           </div>
 
           <div className="flex flex-wrap gap-3 text-sm text-neutral-700">
-          <div className="flex items-center gap-2 rounded-full bg-white dark:bg-neutral-900 px-4 py-2 shadow-sm border border-white dark:border-neutral-800 text-neutral-700 dark:text-neutral-200"><Code2 className="h-4 w-4" /> 5+ Years Experience • CSWA certified • AutoCAD Certified</div>
+          <div className="flex items-center gap-2 rounded-full bg-white dark:bg-neutral-900 px-4 py-2 shadow-sm border border-white dark:border-neutral-800 text-neutral-700 dark:text-neutral-200"><Code2 className="h-4 w-4" /> 5+ Years Experience</div>
           </div>
           <div className="flex flex-wrap gap-3">
           <a href="#projects" className="rounded-2xl px-5 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 shadow-lg hover:-translate-y-0.5 transition">             
@@ -242,9 +242,8 @@ export default function InteractiveResumeSite() {
               </div>
           ))}
           <div className="col-span-2 rounded-[2rem] bg-neutral-900 text-white p-6 shadow-xl">
-            <p className="text-sm uppercase tracking-[0.2em] text-white/70">In Short</p>
-            <p className="mt-3 text-lg leading-relaxed text-white/90">
-              4 client sites shipped. 2 robotics programs led. 1 goal — build things that matter.
+            <p className="text-lg leading-relaxed text-white/90">
+              Build technology that solves real problems for real people. Engineering and design should uplift communities — not just impress them.
             </p>
           </div>
         </motion.div>
@@ -545,16 +544,7 @@ export default function InteractiveResumeSite() {
   </div>
 </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-12" id="vision">
-      <div className="rounded-[2rem] bg-white/90 dark:bg-neutral-900/90 border border-white dark:border-neutral-800 p-8 shadow-lg">
-          <h2 className="text-3xl font-bold mb-4">My Vision</h2>
-          <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-3xl">
-            Build technology that solves real problems for real people. Engineering and design should uplift communities — not just impress them.
-          </p>
-        </div>
-      </section>
-
-      <section className="max-w-6xl mx-auto px-6 py-12" id="contact">
+<section className="max-w-6xl mx-auto px-6 py-12" id="contact">
         <div className="rounded-[2rem] bg-neutral-900 text-white p-8 md:p-10 shadow-2xl">
           <h2 className="text-3xl font-bold">Contact</h2>
           <p className="mt-3 text-white/75 max-w-2xl">
