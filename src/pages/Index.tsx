@@ -486,7 +486,7 @@ export default function InteractiveResumeSite() {
   <div className="rounded-[2rem] bg-neutral-900 text-white p-8 shadow-xl">
     <p className="text-sm uppercase tracking-[0.2em] text-white/50 mb-4">What drives me</p>
     <p className="text-2xl md:text-3xl font-semibold leading-snug text-white/90 max-w-3xl">
-      "I want to build software for systems that operate where humans can’t — spacecraft, autonomous vehicles, mission-critical infrastructure."
+      "I code to help people reach their dreams. I serve because the world needs people who show up. I lead because it’s a gift — and I’m still figuring out which path to take it down."
     </p>
   </div>
 </section>
