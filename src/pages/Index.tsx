@@ -56,56 +56,49 @@ const experience = [
     title: "Lead Programmer",
     org: "VEX V5 Robotics Team 6079R",
     period: "2024–Present",
-    description:
-      "Develop C++ systems for autonomous and driver-controlled robotics, focusing on debugging, performance optimization, and competition reliability.",
+    bullets: ["C++ autonomous & driver-controlled systems", "Odometry logic & performance optimization", "Competition-ready debugging under pressure"],
     tag: "Robotics",
   },
   {
-    title: "Software Engineering Intern (uncompensated)",
+    title: "Software Engineering Intern",
     org: "ExxonMobil x HISD",
     period: "2026",
-    description:
-      "Built and deployed a web-based prototype to reduce material documentation loss through secure login workflows, QR and document scanning, timestamp tracking, and structured file handling.",
+    bullets: ["Built React + Vite prototype for material tracking", "Secure login, QR scanning & timestamp logging", "Deployed via GitHub + Vercel"],
     tag: "Internship",
   },
   {
     title: "Lead Programmer",
     org: "FIRST Robotics",
     period: "2025–Present",
-    description:
-      "Program robot systems using Java, working with sensors, control logic, and team-based engineering workflows in competition environments.",
+    bullets: ["Java programming for sensors & control logic", "Team-based engineering & competition workflows"],
     tag: "Software",
   },
   {
     title: "Engineering Notebook Coordinator",
     org: "Robotics Team",
     period: "2025–Present",
-    description:
-      "Document design processes, testing iterations, and engineering decisions to support team organization and competition readiness.",
+    bullets: ["Documented design process & testing iterations", "Supported competition readiness & team organization"],
     tag: "Leadership",
   },
   {
     title: "Volunteer Coordinator",
     org: "National Honor Society",
     period: "2025–Present",
-    description:
-      "Organize and promote service opportunities while encouraging student involvement in community engagement.",
+    bullets: ["Organized community service opportunities", "Encouraged student involvement in outreach"],
     tag: "Service",
   },
   {
     title: "Houston SPCA Volunteer",
     org: "Animal Advocacy",
     period: "2024–Present",
-    description:
-      "Completed 200+ hours supporting animal care, adoption events, wildlife support, and equine and farm training programs.",
+    bullets: ["200+ hours across care & adoption programs", "Wildlife support, equine & farm training"],
     tag: "Community",
   },
   {
     title: "Young Texan Ambassador",
     org: "Keep Texas Beautiful – Greater Houston Cohort",
     period: "2025–Present",
-    description:
-      "Selected as a Young Texan Ambassador for the Greater Houston Cohort, representing youth voices in environmental stewardship and community beautification across Texas.",
+    bullets: ["Selected for competitive Greater Houston Cohort", "Representing youth in environmental stewardship statewide"],
     tag: "Ambassador",
     link: "https://ktb.org/our-work/young-texan-ambassadors/",
   },
@@ -140,10 +133,10 @@ const projects = [
 
 const stats = [
   { label: "Programming Languages", value: "4+" },
-  { label: "Robotics Programs", value: "3" },
-  { label: "FIRST Robotics", value: "Lead Programmer" },
-  { label: "Service Hours", value: "200+" },
-  { label: "Focus Areas", value: "Code + Design" }
+  { label: "Robotics Programs Led", value: "2" },
+  { label: "Client Sites Shipped", value: "4" },
+  { label: "Volunteer Hours", value: "200+" },
+  { label: "Certifications", value: "CSWA + AutoCAD" },
 ];
 
 export default function InteractiveResumeSite() {
@@ -198,10 +191,9 @@ export default function InteractiveResumeSite() {
             Software Developer
             </p>
             <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed">
-              I’m a student builder with experience in coding, robotics, engineering, and
-              design. As a lead programmer for both VEX V5 and FIRST Robotics, I work with
-              C++ and Java while also exploring architecture through AutoCAD, Revit, and
-              human-centered design ideas.
+              I build software, lead robotics programs, and ship real products — from
+              competition floors to enterprise deployments. C++, Java, React, and everything
+              in between.
             </p>
           </div>
 
@@ -250,9 +242,9 @@ export default function InteractiveResumeSite() {
               </div>
           ))}
           <div className="col-span-2 rounded-[2rem] bg-neutral-900 text-white p-6 shadow-xl">
-            <p className="text-sm uppercase tracking-[0.2em] text-white/70">Personal Brand</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-white/70">In Short</p>
             <p className="mt-3 text-lg leading-relaxed text-white/90">
-              Clean code, creative thinking, team leadership, and technical curiosity.
+              4 client sites shipped. 2 robotics programs led. 1 goal — build things that matter.
             </p>
           </div>
         </motion.div>
@@ -312,7 +304,14 @@ export default function InteractiveResumeSite() {
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-neutral-600 dark:text-neutral-400 mt-1">{item.org}</p>
               <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-1">{item.period}</p>
-              <p className="mt-4 text-neutral-700 dark:text-neutral-300 leading-relaxed flex-1">{item.description}</p>
+              <ul className="mt-4 space-y-1 flex-1">
+                {item.bullets.map((b) => (
+                  <li key={b} className="flex items-start gap-2 text-sm text-neutral-700 dark:text-neutral-300">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-neutral-400 dark:bg-neutral-600 shrink-0" />
+                    {b}
+                  </li>
+                ))}
+              </ul>
               {"link" in item && item.link && (
                 <a
                   href={item.link}
@@ -454,10 +453,12 @@ export default function InteractiveResumeSite() {
 </motion.div>
         </div>
       </section>
-      <section className="max-w-6xl mx-auto px-6 py-12" id="coding-projects">
-        <div className="flex items-center gap-3 mb-6">
-          <h2 className="text-3xl font-bold">Coding Projects</h2>
+      <section className="py-16" id="coding-projects" style={{background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)"}}>
+        <div className="max-w-6xl mx-auto px-6">
+        <div className="flex items-center gap-3 mb-2">
+          <h2 className="text-3xl font-bold text-white">Coding Projects</h2>
         </div>
+        <p className="text-white/50 text-sm mb-8">Live sites — click any card to visit</p>
         <div className="grid md:grid-cols-2 gap-6">
           {codingProjects.map((project) => (
             <motion.a
@@ -466,30 +467,27 @@ export default function InteractiveResumeSite() {
               target="_blank"
               rel="noreferrer"
               whileHover={{ y: -6 }}
-              className="rounded-[2rem] bg-white dark:bg-neutral-900 p-6 border border-white dark:border-neutral-800 shadow-lg flex flex-col group"
+              className="rounded-[2rem] bg-white/10 backdrop-blur border border-white/10 p-6 shadow-lg flex flex-col group hover:bg-white/15 transition"
             >
               <div className="flex items-start justify-between gap-4 mb-4">
-                <div className="inline-block text-xs rounded-full bg-emerald-100 dark:bg-neutral-800 px-3 py-1 text-neutral-700 dark:text-neutral-200">
+                <div className="inline-block text-xs rounded-full bg-white/20 px-3 py-1 text-white/80">
                   {project.tag}
                 </div>
-                <ChevronRight className="h-4 w-4 text-neutral-400 group-hover:text-neutral-700 dark:group-hover:text-neutral-200 transition mt-0.5 shrink-0" />
+                <ChevronRight className="h-4 w-4 text-white/30 group-hover:text-white/80 transition mt-0.5 shrink-0" />
               </div>
-              <h3 className="text-xl font-semibold">{project.title}</h3>
-              <p className="mt-3 text-neutral-600 dark:text-neutral-400 leading-relaxed flex-1">{project.description}</p>
-              <p className="mt-4 text-sm font-medium text-neutral-400 dark:text-neutral-500 truncate">{project.link}</p>
+              <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+              <p className="mt-3 text-white/60 leading-relaxed flex-1">{project.description}</p>
             </motion.a>
           ))}
+        </div>
         </div>
       </section>
 
       <section className="max-w-6xl mx-auto px-6 py-12">
-  <div className="rounded-[2rem] bg-white/90 dark:bg-neutral-900/90 border border-white dark:border-neutral-800 p-8 shadow-lg">
-    <h2 className="text-3xl font-bold mb-4">Space & Engineering Interests</h2>
-    <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-3xl">
-      I’m deeply interested in aerospace engineering and space exploration, especially how software
-      and robotics power real-world systems like spacecraft navigation, autonomous control,
-      and mission design. I’m excited by the idea of building technology that operates
-      beyond Earth and solves complex engineering challenges.
+  <div className="rounded-[2rem] bg-neutral-900 text-white p-8 shadow-xl">
+    <p className="text-sm uppercase tracking-[0.2em] text-white/50 mb-4">What drives me</p>
+    <p className="text-2xl md:text-3xl font-semibold leading-snug text-white/90 max-w-3xl">
+      "I want to build software for systems that operate where humans can’t — spacecraft, autonomous vehicles, mission-critical infrastructure."
     </p>
   </div>
 </section>
@@ -551,11 +549,7 @@ export default function InteractiveResumeSite() {
       <div className="rounded-[2rem] bg-white/90 dark:bg-neutral-900/90 border border-white dark:border-neutral-800 p-8 shadow-lg">
           <h2 className="text-3xl font-bold mb-4">My Vision</h2>
           <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-3xl">
-          I believe design should feel human. My goal is to create technology, architecture,
-           and systems that not only function efficiently, but also improve how people 
-           feel, connect, and experience the world around them. By combining 
-           engineering, creativity, and innovation, I aim to build solutions that support
-           my community, uplift underserved populations, and create a more thoughtful and connected future.
+            Build technology that solves real problems for real people. Engineering and design should uplift communities — not just impress them.
           </p>
         </div>
       </section>
