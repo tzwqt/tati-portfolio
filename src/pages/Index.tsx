@@ -13,7 +13,37 @@ const projectLinks = {
   architecture: "/architecture-portfolio.pdf",
   exxonLive: "https://exxon-hisd-portal.vercel.app",
   exxonGithub: "https://github.com/tzwqt/exxon-hisd-portal",
+  buildsbyTati: "https://builds-by-tati.vercel.app/",
+  kaesKloset: "https://kaes-kloset.vercel.app/",
+  tlcMinistries: "https://tlc-ministries.vercel.app/",
 };
+
+const codingProjects = [
+  {
+    title: "Builds by Tati",
+    description: "Custom website design and development service offering professional sites at accessible prices — built for small businesses, creators, and anyone who needs a quality web presence without the big agency cost.",
+    tag: "Freelance",
+    link: projectLinks.buildsbyTati,
+  },
+  {
+    title: "ExxonMobil Material Documentation Portal",
+    description: "A live React-based prototype built for ExxonMobil x HISD featuring secure worker sign-in, QR/document scanning, upload workflows, and timestamp tracking for enterprise material accountability.",
+    tag: "Internship",
+    link: projectLinks.exxonLive,
+  },
+  {
+    title: "Kae's Kloset",
+    description: "Client project for a student at HCU — a clean, modern e-commerce style site built to showcase and sell their clothing collection.",
+    tag: "Client Work",
+    link: projectLinks.kaesKloset,
+  },
+  {
+    title: "TLC Ministries",
+    description: "Website built for a ministry client, providing a welcoming online presence with information about services, community events, and outreach programs.",
+    tag: "Client Work",
+    link: projectLinks.tlcMinistries,
+  },
+];
 
 const skillGroups = {
   Programming: ["Python", "C++", "Java", "Arduino", "Git", "VS Code"],
@@ -69,6 +99,15 @@ const experience = [
     description:
       "Completed 200+ hours supporting animal care, adoption events, wildlife support, and equine and farm training programs.",
     tag: "Community",
+  },
+  {
+    title: "Young Texan Ambassador",
+    org: "Keep Texas Beautiful – Greater Houston Cohort",
+    period: "2025–Present",
+    description:
+      "Selected as a Young Texan Ambassador for the Greater Houston Cohort, representing youth voices in environmental stewardship and community beautification across Texas.",
+    tag: "Ambassador",
+    link: "https://ktb.org/our-work/young-texan-ambassadors/",
   },
 ];
 
@@ -274,14 +313,24 @@ export default function InteractiveResumeSite() {
             <motion.div
               key={item.title}
               whileHover={{ y: -6 }}
-              className="rounded-[2rem] bg-white dark:bg-neutral-900 p-6 border border-white dark:border-neutral-800 shadow-lg">
+              className="rounded-[2rem] bg-white dark:bg-neutral-900 p-6 border border-white dark:border-neutral-800 shadow-lg flex flex-col">
 <div className="inline-block text-xs rounded-full bg-orange-100 dark:bg-neutral-800 px-3 py-1 mb-4 text-neutral-700 dark:text-neutral-200">
                   {item.tag}
               </div>
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="text-neutral-600 dark:text-neutral-400 mt-1">{item.org}</p>
               <p className="text-sm text-neutral-500 dark:text-neutral-500 mt-1">{item.period}</p>
-              <p className="mt-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">{item.description}</p>
+              <p className="mt-4 text-neutral-700 dark:text-neutral-300 leading-relaxed flex-1">{item.description}</p>
+              {"link" in item && item.link && (
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition"
+                >
+                  Learn more <ChevronRight className="h-3 w-3" />
+                </a>
+              )}
                           </motion.div>
           ))}
         </div>
@@ -433,6 +482,34 @@ export default function InteractiveResumeSite() {
 </motion.div>
         </div>
       </section>
+      <section className="max-w-6xl mx-auto px-6 py-12" id="coding-projects">
+        <div className="flex items-center gap-3 mb-6">
+          <h2 className="text-3xl font-bold">Coding Projects</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {codingProjects.map((project) => (
+            <motion.a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              whileHover={{ y: -6 }}
+              className="rounded-[2rem] bg-white dark:bg-neutral-900 p-6 border border-white dark:border-neutral-800 shadow-lg flex flex-col group"
+            >
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="inline-block text-xs rounded-full bg-emerald-100 dark:bg-neutral-800 px-3 py-1 text-neutral-700 dark:text-neutral-200">
+                  {project.tag}
+                </div>
+                <ChevronRight className="h-4 w-4 text-neutral-400 group-hover:text-neutral-700 dark:group-hover:text-neutral-200 transition mt-0.5 shrink-0" />
+              </div>
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className="mt-3 text-neutral-600 dark:text-neutral-400 leading-relaxed flex-1">{project.description}</p>
+              <p className="mt-4 text-sm font-medium text-neutral-400 dark:text-neutral-500 truncate">{project.link}</p>
+            </motion.a>
+          ))}
+        </div>
+      </section>
+
       <section className="max-w-6xl mx-auto px-6 py-12">
   <div className="rounded-[2rem] bg-white/90 dark:bg-neutral-900/90 border border-white dark:border-neutral-800 p-8 shadow-lg">
     <h2 className="text-3xl font-bold mb-4">Space & Engineering Interests</h2>
