@@ -47,7 +47,7 @@ const codingProjects = [
 
 const skillGroups = {
   Programming: ["Python", "C++", "Java", "Arduino", "Git", "VS Code"],
-  Engineering: ["AutoCAD", "Mechanical Engineering", "Hardware Engineering", "Raspberry Pi", "Robotics"],
+  Engineering: ["AutoCAD", "Solidworks", "Mechanical Engineering", "Hardware Engineering", "Raspberry Pi", "Robotics"],
   Creative: ["Photography", "PowerPoint", "Word", "Debate", "Technical Writing"],
 };
 
@@ -191,7 +191,7 @@ export default function InteractiveResumeSite() {
             Software Developer
             </p>
             <p className="text-base md:text-lg text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed">
-              I build software, lead robotics programs, and ship real products — from
+              I build software, lead robotics programs, and ship real products - from
               competition floors to enterprise deployments. C++, Java, React, and everything
               in between.
             </p>
