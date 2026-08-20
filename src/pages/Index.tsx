@@ -173,7 +173,7 @@ export default function InteractiveResumeSite() {
         >
           <div className="inline-flex items-center gap-2 rounded-full bg-white/80 dark:bg-neutral-900/80 backdrop-blur px-4 py-2 shadow-sm border border-white dark:border-neutral-800">
   <span className="text-sm font-medium text-neutral-700 dark:text-neutral-200">
-  Houston, TX • 2026 Graduate • Software, Robotics, and Engineering Internships experience
+  Houston, TX • Freshman Honors CS Student • Software, Robotics, and Engineering Internships experience
   </span>
 </div>
 <button
