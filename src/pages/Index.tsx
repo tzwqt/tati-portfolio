@@ -5,14 +5,14 @@ import { Mail, MapPin, Github, Linkedin, Code2, ChevronRight, Download } from "l
 const contactLinks = {
   email: "mailto:tahti07@icloud.com",
   linkedin: "https://www.linkedin.com/in/tahti08/",
-  github: "https://github.com/tzwqt",
+  github: "https://github.com/tahtilol",
   resume: "/tati-resume.pdf",
 };
 const projectLinks = {
   vex: "/vex-notebook.pdf",
   architecture: "/architecture-portfolio.pdf",
   exxonLive: "https://exxon-hisd-portal.vercel.app",
-  exxonGithub: "https://github.com/tzwqt/exxon-hisd-portal",
+  exxonGithub: "https://github.com/tahtilol/exxon-hisd-portal",
   buildsbyTati: "https://builds-by-tati.vercel.app/",
   kaesKloset: "https://kaes-kloset.vercel.app/",
   tlcMinistries: "https://tlc-ministries.vercel.app/",
